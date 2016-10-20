@@ -60,6 +60,7 @@ homu = {
     'repos': repos.values(),
     'reviewers': os.environ['HOMU_REVIEWERS'].split(' '),
     'web': {
+        'host': 'localhost',
         'port': os.environ['PORT'],
     },
 }
