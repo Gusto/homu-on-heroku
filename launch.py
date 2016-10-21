@@ -60,7 +60,7 @@ homu = {
     'repos': repos.values(),
     'reviewers': os.environ['HOMU_REVIEWERS'].split(' '),
     'web': {
-        'host': '127.0.0.1',
+        'host': '0.0.0.0',
         'port': os.environ['PORT'],
     },
 }
@@ -68,8 +68,8 @@ homu = {
 with open('cfg.toml', 'w') as f:
     f.write(template.render(homu=homu))
 
-os.makedirs(os.path.join(os.path.expanduser('~'), '.ssh'))
-utils.logged_call(['sh', '-c',
-                   'ssh-keyscan -H github.com >> ~/.ssh/known_hosts'])
+# os.makedirs(os.path.join(os.path.expanduser('~'), '.ssh'))
+# utils.logged_call(['sh', '-c',
+#                    'ssh-keyscan -H github.com >> ~/.ssh/known_hosts'])
 
 sys.exit(main())
