@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Operational notes to the README. Explanations of some undocumented Homu features/behaviors.
+- Allow any of the CI repo lists to be blank.
 
 ## [v0.2.1]
 
