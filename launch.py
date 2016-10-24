@@ -12,6 +12,7 @@ ssh_key = os.environ.get('GIT_SSH_KEY', '')
 
 repos = {}
 
+
 def append(slug, ci):
     if slug in repos:
         if ci == 'appveyor':
