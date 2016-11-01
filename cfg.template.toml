@@ -18,6 +18,9 @@ status_based_exemption = {{ homu.git.local_git }}
 [web]
 host = "{{ homu.web.host }}"
 port = {{ homu.web.port }}
+{% if homu.web.secret %}
+secret = "{{ homu.web.secret }}"
+{% endif %}
 
 {% for repo in homu.repos %}
 [repo.'{{ repo.slug }}']
