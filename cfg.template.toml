@@ -29,6 +29,9 @@ secret = "{{ homu.web.secret }}"
 owner = "{{ repo.owner }}"
 name = "{{ repo.name }}"
 
+# squash PRs when merging
+squash = true
+
 # who has r+ rights?
 reviewers = {{ homu.reviewers }}
 
