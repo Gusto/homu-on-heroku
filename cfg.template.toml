@@ -32,6 +32,9 @@ name = "{{ repo.name }}"
 # who has r+ rights?
 reviewers = {{ homu.reviewers }}
 
+# squash PRs when merging them
+autosquash = true
+
 [repo.'{{ repo.slug }}'.github]
 
 # arbitrary secret (e.g. openssl rand -hex 20)
