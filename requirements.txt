@@ -1,2 +1,2 @@
--e git://github.com/gusto/bors.git@7184c9b1a2ec3c3a299ec59196b124074465ca96#egg=homu
+-e git://github.com/gusto/bors.git@74027c62f6ca264b5b13f648c20a3e7200f4a16c#egg=homu
 Jinja2==2.8
