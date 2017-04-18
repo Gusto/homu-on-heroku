@@ -11,6 +11,7 @@ with open('cfg.template.toml') as f:
 ssh_key = os.environ.get('GIT_SSH_KEY', '')
 admin_secret = os.environ.get('HOMU_WEB_SECRET', '')
 sync_on_start = os.environ.get('SYNC_ON_START', 'false')
+reviewers = os.environ.get('HOMU_REVIEWERS', '')
 
 repos = {}
 
@@ -61,7 +62,7 @@ homu = {
         'ssh_key': ssh_key,
     },
     'repos': repos.values(),
-    'reviewers': os.environ['HOMU_REVIEWERS'].split(' '),
+    'reviewers': reviewers.split(' '),
     'web': {
         'host': '0.0.0.0',
         'port': os.environ['PORT'],
