@@ -1,2 +1,2 @@
--e git://github.com/gusto/homu.git@bd8c49c8f94a4d9e228ab0ea55f8ff12591ad78f#egg=homu
+-e git://github.com/gusto/homu.git@508ec561e134774e2c67c3e7aa1027067a5ddcc5#egg=homu
 Jinja2==2.8
