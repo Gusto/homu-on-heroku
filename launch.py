@@ -24,6 +24,9 @@ def append(slug, ci):
         if ci == 'solano':
             repos[slug]['solano'] = True
 
+        if ci == 'buildkite':
+            repos[slug]['buildkite'] = True
+
         if ci == 'travis':
             repos[slug]['travis'] = True
     else:
@@ -36,6 +39,7 @@ def append(slug, ci):
             'slug': slug,
             'travis': True if ci == 'travis' else False,
             'solano': True if ci == 'solano' else False,
+            'buildkite': True if ci == 'buildkite' else False,
         }
 
 if os.environ.get('HOMU_APPVEYOR_REPOS'):
@@ -49,6 +53,10 @@ if os.environ.get('HOMU_TRAVIS_REPOS'):
 if os.environ.get('HOMU_SOLANO_REPOS'):
     for slug in os.environ['HOMU_SOLANO_REPOS'].split(' '):
         append(slug, 'solano')
+
+if os.environ.get('HOMU_BUILDKITE_REPOS'):
+    for slug in os.environ['HOMU_BUILDKITE_REPOS'].split(' '):
+        append(slug, 'buildkite')
 
 homu = {
     'gh': {

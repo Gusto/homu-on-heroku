@@ -56,4 +56,9 @@ context = "continuous-integration/travis-ci/push"
 context = "ci/solano-ci"
 {% endif %}
 
+{% if repo.buildkite %}
+[repo.'{{ repo.slug }}'.status.buildkite]
+context = "buildkite/"
+{% endif %}
+
 {% endfor %}
