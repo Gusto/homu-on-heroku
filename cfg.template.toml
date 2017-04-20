@@ -58,7 +58,7 @@ context = "ci/solano-ci"
 
 {% if repo.buildkite %}
 [repo.'{{ repo.slug }}'.status.buildkite]
-context = "buildkite/"
+context = "buildkite/{{ repo.name }}"
 {% endif %}
 
 {% endfor %}
